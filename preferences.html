@@ -4,9 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Préfèrences</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<h1>Préfèrences</h1>
+
 <body>
-    
+    <header>
+        <div class="ban1">
+            <img src="Ressources\logo.png" alt="logo Enis">
+        </div>
+
+        <div class="ban2">
+            <h1>Promo EDWM2509B</h1>
+        </div>
+        <div class="ban3">
+            <nav>
+                <div>
+                    <a href="index.html" id="acc" title="Acceuil" class="lien">Acceuil</a>
+                </div>
+
+                <div>
+                    <a href="preferences.html" id="pref" title="Préfèrences" class="lien">Préfèrences</a>   
+                </div>
+
+                <div>
+                    <a href="carte.html" id="Carte" title="Carte" class="lien">Carte</a>   
+                </div>
+
+                <div>
+                    <a href="informations.html" id="info" title="Informations" class="lien">Informations</a>   
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <form action="" class="formpref">
+
+        <section>
+            <h1>Préférences du site</h1>
+        </section>
+
+        <div class="row">
+            <label for="theme"><h2>Thème du site</h2></label>
+            <select id="theme" name="theme">
+                <option value="clair">Clair</option>
+                <option value="sombre">Sombre</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <span><h2>Format d'affichage de la liste des apprenants</h2></span>
+            <div class="radio2">
+                <label><input type="radio" name="affichage2" value="liste" id="choix" checked> Liste (Table)</label>
+                <label><input type="radio" name="affichage2" value="grid" id="choix"> Cartes (Grid)</label>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="index.html" id="acc" title="Acceuil" class="lien">Retour à la page d'acceuil</a>
+            <button class="btn" type="submit" id="btn">Enregistrer</button>
+        </div>
+
+    </form>
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>

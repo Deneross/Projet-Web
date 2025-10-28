@@ -39,17 +39,35 @@ nav{
 nav a{
     display: inline-block;
     /* background-color: blueviolet; */
+    
+}
+
+.lien{
     padding:8px 12px;
     border: solid black 2px;
     border-radius: 7%;
     box-shadow: 4px 4px 0px black;;
     width: 100%;
     text-align: center;
+    text-decoration: none;
+    color: black;
+
 }
+
+.btn{
+    padding:8px 12px;
+    background-color: white;
+    border: solid black 2px;
+    border-radius: 7%;
+    box-shadow: 4px 4px 0px black;
+    height: 100%;
+}
+
 
 .radio{
     display: flex;
     justify-content: center;
+    gap: 2%;
 }
 
 .tab{
@@ -124,16 +142,49 @@ tbody tr:nth-child(even) {
 }
 
 .inf3{
-    justify-content: center;
+    display: flex;
     margin-top: 3%;
+    width: 8vw;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.inf3 a{
-    text-align: center;
-    width: 10vw;
-    padding:8px 12px;
-    border: solid black 2px;
-    border-radius: 7%;
-    box-shadow: 4px 4px 0px black;
+
+.formpref section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center;
+}
+
+.formpref .row {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px 24px;
+  align-items:center;
+  margin: 18px 0;
+  width: 60vw;
+  margin-left: auto;        
+  margin-right: auto;
+}
+
+.formpref select{
+    width: 5vw;
+}
+
+.radio2 { 
+    display:flex; 
+    flex-direction:column; 
+    gap:8px; 
+}
+
+.actions { 
+    display:grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 25%; 
+    margin-top: 3%; 
+    width: 40vw;
+    margin-left: auto;        
+    margin-right: auto;
 }
