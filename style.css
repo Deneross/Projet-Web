@@ -170,7 +170,7 @@ tbody tr:nth-child(even) {
 }
 
 .formpref select{
-    width: 5vw;
+    width: 6vw;
 }
 
 .radio2 { 
@@ -187,4 +187,61 @@ tbody tr:nth-child(even) {
     width: 40vw;
     margin-left: auto;        
     margin-right: auto;
+}
+
+/* ----tentative pour faire un switch d'affichage---------- */
+[hidden]{
+    display: none;
+}
+/* grille */
+.grille{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+    gap: 12px;
+    padding: 8px 8px;
+}
+.case{
+    text-align: center;
+    border:2px solid black;
+    border-radius:8px;
+    padding:10px;
+
+}
+
+/* ------------déclaration du theme------------------ */
+
+
+/* clair par default*/
+body.clair{
+    background: #fff;
+    color: #000;
+    border: black;
+}
+
+body.clair .lien,
+body.clair .btn {
+    box-shadow: 4px 4px 0px black;
+}
+
+/* sombre */
+body.sombre{
+    background: #04061f;
+    color: #fff;
+    border: white;
+}
+
+body.sombre .lien,
+body.sombre .btn{
+    background-color: white;
+    box-shadow: 4px 4px 0px grey;
+}
+
+
+body.sombre .tab,
+body.sombre .grille{
+    color: black;
+}
+
+body.sombre .case{
+    background-color: white;
 }

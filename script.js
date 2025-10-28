@@ -1,12 +1,12 @@
 window.onload = init
 
-fetch('promo.json').then( response => response.json()).then(promo => remplirTableau(promo.apprenants))
+fetch('promo.json').then( response => response.json()).then(promo => affichageAcceuil(promo.apprenants))
 
 returnStorage()
 
 
 
-
+//---------------------fonction----------------------------------------------
 function init(){
     const btn = document.getElementById('btn')
     const lien = document.querySelectorAll('.lien')
@@ -43,30 +43,50 @@ function init(){
     
     btn.addEventListener('click',enregistrer)
 
-    
+    // changement de theme
+    const select = document.getElementById("theme")
+
+    select.addEventListener("change", () => {
+           // mise à zero
+    document.body.className = "";
+    document.body.classList.add(select.value);
+});
 }
 
+//---------------------------en dehors de la fonction init---------------------------
 
 function enregistrer(){
     let theme = document.getElementById('theme').value
-    let choix = document.querySelector('input[name="affichage2"]:checked').value
+    let choix = document.querySelector('input[name="affichage"]:checked').value
 
     localStorage.setItem("theme", theme)
     localStorage.setItem("choix", choix)
+    alert("Paramètres enregistrés")
 }
 
-
+//-----------------Recup du local storage----------
 function returnStorage(){
+    // pour le theme
     const storeTheme = localStorage.getItem('theme')
+
     if(storeTheme){
-        let select = document.getElementById('theme')
-        select.value = storeTheme
+        // applique toujours le theme
+        document.body.className = "";
+        document.body.classList.add(storeTheme);
+
+        // si il y a le select, mis à jour
+        let select = document.getElementById('theme');
+        if(select){
+            select.value = storeTheme;
+        }
     }
+
+    // pour l'affichage
     const storeChoice = localStorage.getItem('choix')
 
     if(storeChoice){
-        let radio = document.querySelectorAll('input[name="affichage2"]')
-
+        let radio = document.querySelectorAll('input[name="affichage"]')
+        
         radio.forEach(rad => {
             if(rad.value === storeChoice){
                 rad.checked = true
@@ -79,25 +99,70 @@ function returnStorage(){
 
 
 
-function remplirTableau(promo){
+function affichageAcceuil(promo){
+    //lecture du local storage ou par default position liste
+    let choix = localStorage.getItem('choix') || 'liste';
 
-   document.getElementById('tableau')
-   let listeApprenantsBody = document.querySelector('#tableau tbody') 
-   //pour vider le tableau avant de le remplir
-   listeApprenantsBody.innerHTML = ''
+    //si on touche au radio 
+    const radios = document.querySelectorAll('input[name="affichage"]');
+    
+    // Quand clique radio on met à jour
+    radios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            choix = event.target.value;
+            render();
+        });
+    });
+    
+    //affichage de base
+    render();
+
+    function render(){
+        //ecoute du tableau
+        const listeApprenantsBody = document.querySelector('#tableau tbody')
+        const tableau = document.getElementById('tab')
+        const grille = document.getElementById('grille')
+        //eviter erreur
+        if(!grille || !tableau) return;
+
+        //pour vider le tableau et la grille avant de le remplir
+        listeApprenantsBody.innerHTML = ''
+        grille.innerHTML = ''
+
+        // si liste
+        if(choix === 'liste'){
+            // montrer tableau, cacher grille
+            tableau.removeAttribute('hidden');
+            grille.setAttribute('hidden','');
+
+            promo.forEach(apprenants => {
+
+                let tr = document.createElement("tr")
+
+                tr.innerHTML = `
+                    <td>${apprenants.nom}</td>
+                    <td>${apprenants.prenom}</td>
+                    <td>${apprenants.ville}</td>
+                    <td><a href="#">Détail</a></td>
+                    `
+                listeApprenantsBody.appendChild(tr)
+            })
+        }else{
+            // montrer grille, cacher tableau
+            grille.removeAttribute('hidden');
+            tableau.setAttribute('hidden','');
 
 
-   promo.forEach(apprenants => {
+            promo.forEach(apprenants => {
+                let div = document.createElement("div")
+                div.className = 'case';
+                div.innerHTML = `
+                    <h3> ${apprenants.nom}</h3>
+                    <p>${apprenants.prenom}</p>
+                    <p><a href="#" class="lien">Détail</a></p>`;
+                grille.appendChild(div);
+            });
 
-    let tr = document.createElement("tr")
-
-    tr.innerHTML = `
-          <td>${apprenants.nom}</td>
-          <td>${apprenants.prenom}</td>
-          <td>${apprenants.ville}</td>
-          <td><a href="#">Détail</a></td>
-        `
-        listeApprenantsBody.appendChild(tr)
-      })
-
+        }
+    }
 }
