@@ -6,8 +6,8 @@
       "nom" : "DUFRENE MARTIN",
       "prenom" : "Elodie",
       "ville" : "Ingrandes Le Fresne sur Loire",
-      "avatar" : "Ressources/avatar/avatar2.png",
-      "anecdotes" : "1 - Mére de deux enfants , 1 ans 4 ans / 2- posséde 4 mouton de Ouessant",
+      "avatar" : "../Ressources/avatar/avatar2.png",
+      "anecdotes" : "1 - Mére de deux enfants , 1 ans et 4 ans.\n2- Posséde 4 moutos de Ouessant",
       "coordonnees": {
         "latitude" : "47.404134004337735",
         "longitude" : "-0.9208918193951624"
@@ -19,7 +19,7 @@
       "nom" : "SANCHEZ",
       "prenom" : "Alexia",
       "ville": "Cuguand la Bernardière",
-      "avatar" : "Ressources/avatar/avatar4.png",
+      "avatar" : "../Ressources/avatar/avatar4.png",
       "anecdotes" : "1- Grande fan de licorne",
       "coordonnees": {
         "latitude" : "47.066059468906445",
@@ -32,8 +32,8 @@
       "nom" : "BRUNET",
       "prenom" : "Mathilde",
       "ville": "Niort",
-      "avatar" : "Ressources/avatar/avatar3.png",
-      "anecdotes" : "1- Mére d'un enfant de 2an et posséde un lapin",
+      "avatar" : "../Ressources/avatar/avatar3.png",
+      "anecdotes" : "1- Mére d'un enfant de 2 ans.\n2- posséde un lapin",
       "coordonnees": {
         "latitude" : "46.32395539015915", 
         "longitude" : "-0.4648980256257427"
@@ -45,8 +45,8 @@
       "nom" : "PAQUEREAU",
       "prenom" : "Fabien",
       "ville": "Cholet",
-      "avatar" : "Ressources/avatar/avatar1.png",
-      "anecdotes" : "Vient d'acheter une maison",
+      "avatar" : "../Ressources/avatar/avatar1.png",
+      "anecdotes" : "Auteur du document",
       "coordonnees": {
         "latitude" : "47.05926071677252",
         "longitude" : "-0.8793965296007278"
@@ -58,8 +58,8 @@
       "nom" : "DOE",
       "prenom" : "Jhon",
       "ville": "Nantes",
-      "avatar" : "Ressources/avatar.png",
-      "anecdotes" : "il n'existe pas",
+      "avatar" : "",
+      "anecdotes" : "Il n'existe pas",
       "coordonnees": {
         "latitude" : "47.21649235484549",
         "longitude" : "-1.5569358992618954"

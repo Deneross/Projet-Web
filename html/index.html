@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> -->
+
+    <!-- bootstrap
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="ban1">
+            <img src="../Ressources/logo.png" alt="logo Enis">
+        </div>
+
+        <div class="ban2">
+            <h1>Promo EDWM2509B</h1>
+        </div>
+        <div class="ban3">
+            <nav>
+                <div>
+                    <a href="index.html" id="acc" title="Acceuil" class="lien">Acceuil</a>
+                </div>
+
+                <div>
+                    <a href="preferences.html" id="pref" title="Préfèrences" class="lien">Préfèrences</a>   
+                </div>
+
+                <div>
+                    <a href="carte.html" id="Carte" title="Carte" class="lien">Carte</a>   
+                </div>
+
+                <div>
+                    <a href="informations.html" id="info" title="Informations" class="lien">Informations</a>   
+                </div>
+            </nav>
+            
+
+            <div class="radio">
+                <label>Type d'affichage</label>
+                <label><input type="radio" name="affichage" value="liste" class="choix1" checked>liste</label>
+                <label><input type="radio" name="affichage" value="grid" class="choix1">cartes</label>  
+            </div>
+        </div>
+    </header>
+
+    <h2>Liste des apprenants</h2>
+    <section>
+        <div class="tab" id="tab">
+            <table class="tableau" id="tableau">
+                <thead>
+                    <tr class="head">
+                        <th><h3>Nom</h3></th>
+                        <th><h3>Prénom</h3></th>
+                        <th><h3>Ville</h3></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="grille" id="grille" hidden>
+
+        </div>
+        <div class="detail" id="detail" hidden>
+
+        </div>
+
+        <!-- Modal sans Bootstrap -->
+        <div id="detailModal" class="modal" hidden>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <img id="detailAvatar" class="avatar" alt="">
+                            </div>
+                            <div class="col">
+                                <p><strong>Nom :</strong></p>
+                                <p><strong>Prénom :</strong></p>
+                                <p><strong>Ville :</strong></p>
+                            </div>
+                            <div class="col2">
+                                <p id="detailNom"></p>
+                                <p id="detailPrenom"></p>
+                                <p id="detailVille"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Anecdotes sur l'apprenant :</h4>
+                            <p id="detailAnecdotes"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
