@@ -1,9 +1,52 @@
 window.onload = init
 
-fetch('promo.json').then( response => response.json()).then(promo => affichageAcceuil(promo.apprenants))
+fetch('promo.json')
+  .then(response => response.json()).then(promo => {
+      affichageAcceuil(promo.apprenants) //acceuil
+      affichageCarte(promo.apprenants)  //carte
+  })
 
 returnStorage()
 
+
+//icon maps
+const AvatarIcon = L.Icon.extend({
+    options: {
+        // shadowUrl: 'leaf-shadow.png',
+        iconSize:     [40, 40],
+        // shadowSize:   [50, 64],
+        iconAnchor:   [20, 50],
+        // shadowAnchor: [4, 62],
+        popupAnchor:  [0, -20]
+    }
+});
+
+//map geolocalisé sur Paris
+const map = L.map('map').setView([48.8592479529692, 2.3466913776675606], 5)
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map)
+
+function affichageCarte(promo){
+    const marker = {}
+    promo.forEach(apprenants => {
+        const lat = apprenants.coordonnees.latitude;
+        const lon = apprenants.coordonnees.longitude;
+
+        const avatar = new AvatarIcon({ iconUrl: apprenants.avatar })
+        const point = L.marker([lat, lon],{icon: avatar}).addTo(map)
+
+        marker[apprenants.id] = point
+        marker[apprenants.id].bindPopup(
+            `
+            <strong>${apprenants.prenom} ${apprenants.nom}</strong><br>
+            ${apprenants.ville}
+            `
+        )
+    })
+}
 
 
 //---------------------fonction----------------------------------------------
@@ -50,7 +93,8 @@ function init(){
            // mise à zero
     document.body.className = "";
     document.body.classList.add(select.value);
-});
+    });
+
 }
 
 //---------------------------en dehors de la fonction init---------------------------
@@ -92,7 +136,7 @@ function returnStorage(){
                 rad.checked = true
             }
         })
-    }       
+    }  
 }
 
 

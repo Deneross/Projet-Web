@@ -6,9 +6,47 @@
     <title>Carte</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- pour leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
-<h1>Carte</h1>
 <body>
+    <header>
+        <div class="ban1">
+            <img src="Ressources\logo.png" alt="logo Enis">
+        </div>
+
+        <div class="ban2">
+            <h1>Promo EDWM2509B</h1>
+        </div>
+        <div class="ban3">
+            <nav>
+                <div>
+                    <a href="index.html" id="acc" title="Acceuil" class="lien">Acceuil</a>
+                </div>
+
+                <div>
+                    <a href="preferences.html" id="pref" title="Préfèrences" class="lien">Préfèrences</a>   
+                </div>
+
+                <div>
+                    <a href="carte.html" id="Carte" title="Carte" class="lien">Carte</a>   
+                </div>
+
+                <div>
+                    <a href="informations.html" id="info" title="Informations" class="lien">Informations</a>   
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <h1 class="texte">Carte</h1>
+    </div>
     
+    <div class="map" id="map">
+        
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
