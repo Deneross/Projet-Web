@@ -1,51 +1,4 @@
-*{
-  font-family: 'Inter', sans-serif;
-}
-
-
-header{
-    display: flex;
-    flex-flow:row wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100px;
-}
-
-.texte{
-    text-align: center;
-}
-
-.ban1{
-    /* background-color: aqua; */
-    flex: 0 0 10%;
-}
-
-.ban2{
-    /* background-color: red; */
-    flex: 0 0 45%;
-    text-align: center;
-}
-.ban3{
-    flex: 0 0 45%;
-    height: 100%;
-    /* background-color: gray; */
-    align-content: space-evenly;
-}
-
-nav{
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 50%;
-}
-
-nav a{
-    display: inline-block;
-    /* background-color: blueviolet; */
-    
-}
+/* Components */
 
 .lien{
     padding:8px 12px;
@@ -56,7 +9,7 @@ nav a{
     text-align: center;
     text-decoration: none;
     color: black;
-
+    background-color: white;
 }
 
 .btn{
@@ -66,23 +19,26 @@ nav a{
     border-radius: 7%;
     box-shadow: 4px 4px 0px black;
     height: 100%;
+    cursor: pointer;
 }
 
-
+/* Radio group */
 .radio{
     display: flex;
     justify-content: center;
     gap: 2%;
 }
 
+/* Table container */
 .tab{
     height: 360px;    
     width: 60vw;        
     overflow-y: auto;       
-    border: 2px solid #333;
+    border: 2px solid black;
     border-radius: 6px;
-    }
+}
 
+/* Table */
 .tableau{
     height: 100%;
     width: 100%;                       
@@ -115,6 +71,7 @@ tbody tr:nth-child(even) {
   background-color: #e6e6e6;
 }
 
+/* Info blocks */
 .inf2{
     display: flex;
     flex-flow: row wrap;
@@ -140,6 +97,7 @@ tbody tr:nth-child(even) {
     background-color: white;
     border: 2px solid black;
     overflow:auto;
+    color: black;
 }
 
 .inf2 div:last-child{
@@ -156,7 +114,7 @@ tbody tr:nth-child(even) {
     margin-right: auto;
 }
 
-
+/* Form preferences */
 .formpref section{
     display: flex;
     flex-direction: column;
@@ -185,17 +143,9 @@ tbody tr:nth-child(even) {
     gap:8px; 
 }
 
-.actions { 
-    display:grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: 25%; 
-    margin-top: 3%; 
-    width: 40vw;
-    margin-left: auto;        
-    margin-right: auto;
-}
 
-.map { 
+/* page Map */
+.map{ 
     height: 75vh; 
     background-color: #333;
     text-align: center;
@@ -204,11 +154,7 @@ tbody tr:nth-child(even) {
     margin-bottom: 2vw;
 }
 
-/* ----tentative pour faire un switch d'affichage---------- */
-[hidden]{
-    display: none;
-}
-/* grille */
+/* acceuil apprenants grille*/
 .grille{
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
@@ -220,51 +166,13 @@ tbody tr:nth-child(even) {
     border:2px solid black;
     border-radius:8px;
     padding:10px;
-
 }
-
-
-
-/* ------------déclaration du theme------------------ */
-
-
-/* clair par default*/
-body.clair{
-    background: #fff;
-    color: #000;
-    border: black;
-}
-
-body.clair .lien,
-body.clair .btn {
-    border:2px solid black;
-    box-shadow: 4px 4px 0px black;
-}
-
-/* sombre */
-body.sombre{
-    background: #04061f;
-    color: #fff;
-    border: white;
-}
-
-body.sombre .lien,
-body.sombre .btn{
-    background-color: white;
-    box-shadow: 4px 4px 0px grey;
-}
-
-
-body.sombre .tab,
-body.sombre .grille{
-    color: black;
-}
-
-body.sombre .case{
-    background-color: white;
-}
-
-.divinf{
-    background-color: white;
-    color: black;
+.actions { 
+    display:grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 25%; 
+    margin-top: 3%; 
+    width: 40vw;
+    margin-left: auto;        
+    margin-right: auto;
 }

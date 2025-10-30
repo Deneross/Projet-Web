@@ -1,0 +1,90 @@
+/* ------------déclaration du theme------------------ */
+
+
+/* !!! clair par default !!!*/
+body.clair{
+    background: #fff;
+    color: #000;
+    border: black;
+}
+
+body.clair .lien,
+body.clair .btn {
+    border:2px solid black;
+    box-shadow: 4px 4px 0px black;
+}
+
+/*!!! sombre !!! */
+body.sombre{
+    background: #42424d;
+    color: #fff;
+    border: white; 
+}
+
+body.sombre .lien,
+body.sombre .btn{
+    background-color: white;
+    box-shadow: 4px 4px 0px grey;
+}
+
+
+body.sombre .tab,
+body.sombre .grille{
+    color: black;
+}
+
+body.sombre .case{
+    background-color: white;
+}
+
+
+/*!!! Halloween !!! */
+
+/* caché par défaut */
+.only-halloween {
+  display: none;
+}
+
+/* visible seulement si halloween */
+body.halloween .only-halloween {
+  display: block;
+}
+body.halloween{
+    background-color: #0E1531;
+    background-image: url('../Ressources/background.jpg');
+    background-size:contain;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    min-height: 100vh;    
+    color: #fff;
+    border: white;       
+}
+body.halloween .lien,
+body.halloween .btn{
+    background-color: white;
+    box-shadow: 4px 4px 0px grey;
+}
+
+
+body.halloween .tab,
+body.halloween .grille{
+    color: black;
+}
+
+body.halloween .case{
+    background-color: white;
+}
+
+body.halloween th{
+    background-color: #88903B;  
+}
+
+body.halloween tbody tr:nth-child(odd) {
+  background-color: #FFC61D;
+}
+
+body.halloween tbody tr:nth-child(even) {
+  background-color: #E58201;
+}
+
+

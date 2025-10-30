@@ -1,70 +1,78 @@
 {
-  "apprenants" : [
+  "promo" : {
+    "nom" : "EDWM2509B",
+    "date_debut" : "29/09/2025",
+    "date_fin" : "22/05/2026",
+    "description" : "Découvrez notre formation destinée aux personnes débutantes passionnées par la technologie et à celles envisageant une carrière dans le développement informatique. Plongez dans l'univers du développement avec des cours de pointe tels que la programmation orientée objet, le dev Back-End avec Java Spring Boot, Node.js, PHP et Symfony, sans oublier le Front-End avec HTML5, CSS et Javascript avec Angular ainsi qu'une multitude de projets pour mettre en pratique vos compétences. Cette formation est une opportunité unique pour vous former aux technologies les plus demandées sur le marché du travail. Ne manquez pas cette chance de vous immerger dans l'univers du développement web et de web mobile !",
+    "nombre" : "4",
+    "apprenants" : [
 
-    {
-      "id" : 1,
-      "nom" : "DUFRENE MARTIN",
-      "prenom" : "Elodie",
-      "ville" : "Ingrandes Le Fresne sur Loire",
-      "avatar" : "../Ressources/avatar/avatar2.png",
-      "anecdotes" : "1 - Mére de deux enfants , 1 ans et 4 ans.\n2- Posséde 4 moutos de Ouessant",
-      "coordonnees": {
-        "latitude" : "47.404134004337735",
-        "longitude" : "-0.9208918193951624"
+      {
+        "id" : 1,
+        "nom" : "DUFRENE MARTIN",
+        "prenom" : "Elodie",
+        "ville" : "Ingrandes Le Fresne sur Loire",
+        "avatar" : "../Ressources/avatar/avatar2.png",
+        "anecdotes" : "1 - Mére de deux enfants , 1 ans et 4 ans.\n2- Posséde 4 moutos de Ouessant",
+        "coordonnees": {
+          "latitude" : "47.404134004337735",
+          "longitude" : "-0.9208918193951624"
+        }
+      },
+
+      {
+        "id" : 2,
+        "nom" : "SANCHEZ",
+        "prenom" : "Alexia",
+        "ville": "Cuguand la Bernardière",
+        "avatar" : "../Ressources/avatar/avatar4.png",
+        "anecdotes" : "1- Grande fan de licorne",
+        "coordonnees": {
+          "latitude" : "47.066059468906445",
+          "longitude" : "-1.2530803923510896"
+        }
+      },
+
+      {
+        "id" : 3,
+        "nom" : "BRUNET",
+        "prenom" : "Mathilde",
+        "ville": "Niort",
+        "avatar" : "../Ressources/avatar/avatar3.png",
+        "anecdotes" : "1- Mére d'un enfant de 2 ans.\n2- posséde un lapin",
+        "coordonnees": {
+          "latitude" : "46.32395539015915", 
+          "longitude" : "-0.4648980256257427"
+        }
+      },
+
+      {
+        "id" : 4,
+        "nom" : "PAQUEREAU",
+        "prenom" : "Fabien",
+        "ville": "Cholet",
+        "avatar" : "../Ressources/avatar/avatar1.png",
+        "anecdotes" : "Auteur du document",
+        "coordonnees": {
+          "latitude" : "47.05926071677252",
+          "longitude" : "-0.8793965296007278"
+        }
+      },
+
+      {
+        "id" : 5,
+        "nom" : "DOE",
+        "prenom" : "Jhon",
+        "ville": "Nantes",
+        "avatar" : "",
+        "anecdotes" : "Il n'existe pas",
+        "coordonnees": {
+          "latitude" : "47.21649235484549",
+          "longitude" : "-1.5569358992618954"
+        }
       }
-    },
 
-    {
-      "id" : 2,
-      "nom" : "SANCHEZ",
-      "prenom" : "Alexia",
-      "ville": "Cuguand la Bernardière",
-      "avatar" : "../Ressources/avatar/avatar4.png",
-      "anecdotes" : "1- Grande fan de licorne",
-      "coordonnees": {
-        "latitude" : "47.066059468906445",
-        "longitude" : "-1.2530803923510896"
-      }
-    },
+    ]
+  }
 
-     {
-      "id" : 3,
-      "nom" : "BRUNET",
-      "prenom" : "Mathilde",
-      "ville": "Niort",
-      "avatar" : "../Ressources/avatar/avatar3.png",
-      "anecdotes" : "1- Mére d'un enfant de 2 ans.\n2- posséde un lapin",
-      "coordonnees": {
-        "latitude" : "46.32395539015915", 
-        "longitude" : "-0.4648980256257427"
-      }
-    },
-
-     {
-      "id" : 4,
-      "nom" : "PAQUEREAU",
-      "prenom" : "Fabien",
-      "ville": "Cholet",
-      "avatar" : "../Ressources/avatar/avatar1.png",
-      "anecdotes" : "Auteur du document",
-      "coordonnees": {
-        "latitude" : "47.05926071677252",
-        "longitude" : "-0.8793965296007278"
-      }
-    },
-
-     {
-      "id" : 5,
-      "nom" : "DOE",
-      "prenom" : "Jhon",
-      "ville": "Nantes",
-      "avatar" : "",
-      "anecdotes" : "Il n'existe pas",
-      "coordonnees": {
-        "latitude" : "47.21649235484549",
-        "longitude" : "-1.5569358992618954"
-      }
-    }
-
-  ]
 }

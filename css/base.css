@@ -1,0 +1,52 @@
+/* Base */
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+/* ----tentative pour faire un switch d'affichage---------- */
+[hidden]{
+    display: none;
+}
+
+header{
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+}
+
+.texte{
+    text-align: center;
+}
+
+.ban1{
+    flex: 0 0 10%;
+}
+
+.ban2{
+    display: flex;
+    flex: 0 0 45%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.ban3{
+    flex: 0 0 45%;
+    height: 100%;
+    align-content: space-evenly;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 50%;
+}
+
+nav a{
+    display: inline-block;  
+}

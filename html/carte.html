@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carte</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> -->
-
-    <!-- bootstrap
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
-
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/themes.css">
+    <link rel="stylesheet" href="../css/halloween.css">
     <!-- pour leaflet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -18,11 +15,14 @@
 <body>
     <header>
         <div class="ban1">
-            <img src="../Ressources/logo.png" alt="logo Enis">
+            <img src="../Ressources/logo.png" alt="logo Eni" class="eni">
         </div>
 
         <div class="ban2">
             <h1>Promo EDWM2509B</h1>
+            <div class="only-halloween">
+			    <img src="../Ressources/skeleton.gif" class="skeleton"></img>
+		    </div>
         </div>
         <div class="ban3">
             <nav>
@@ -44,13 +44,19 @@
             </nav>
         </div>
     </header>
-    <div>
-        <h1 class="texte">Carte</h1>
-    </div>
-    
-    <div class="map" id="map">
+    <section>
+
+        <div>
+            <h1 class="texte">Carte</h1>
+        </div>
         
-    </div>
+        <span class="spanSpider">
+            <img class="spider only-halloween" src="../Ressources/spider.gif"></img>
+            <div class="map" id="map"></div>
+        </span>
+        
+    </section>
+    
     <script src="../js/script.js"></script>
 </body>
 </html>

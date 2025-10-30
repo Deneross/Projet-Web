@@ -6,16 +6,20 @@ let DATA
 fetch('../JSON/promo.json')
   .then(r => r.json())
   .then(promo => {
-    DATA = promo.apprenants
+    PROMOINFO = promo.promo,
+    DATA = promo?.promo?.apprenants ?? []
     //acceuil 
     affichageAcceuil(DATA)
+    //affichage info
+    affichageInfo(PROMOINFO)
     //carte
     if (document.getElementById('map') && typeof affichageCarte === 'function') {
     affichageCarte(DATA)
+    returnStorage()
     }
   })
 
-returnStorage()
+
 
 
 //evite erreur sur autre page
@@ -39,9 +43,9 @@ if (document.getElementById('map')) {
         attribution: '&copy <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map)
 
-    function affichageCarte(promo){
+    function affichageCarte(DATA){
         const marker = {}
-        promo.forEach(apprenants => {
+        DATA.forEach(apprenants => {
             const lat = apprenants.coordonnees.latitude
             const lon = apprenants.coordonnees.longitude
 
@@ -66,6 +70,8 @@ if (document.getElementById('map')) {
     }
 
 }
+
+
 
 
 
@@ -96,7 +102,6 @@ function init(){
 
     btn.addEventListener('mouseover', () => {
         btn.style.backgroundColor = 'lightgray'
-           btn.style.cursor = 'pointer'
     })
 
     btn.addEventListener('mouseleave', () => {
@@ -137,10 +142,23 @@ function init(){
             afficherModal(id)
         }
     })
+
 }
 
 //---------------------------en dehors de la fonction init---------------------------
 
+
+//Remplissage info site by json
+function affichageInfo(PROMOINFO){
+    document.querySelector('.ban2 h1').textContent = `Promo ${PROMOINFO.nom}`
+    document.querySelector('.texte .date').textContent = `Formation du ${PROMOINFO.date_debut} au ${PROMOINFO.date_fin}`
+    document.querySelector('.texte .nombre').textContent = `Nombre d'apprenants : ${PROMOINFO.nombre}`
+    document.querySelector('.divinf .des').textContent = `${PROMOINFO.description}`
+}
+
+
+
+// enregistrement des prefs
 function enregistrer(){
     let theme = document.getElementById('theme').value
     let choix = document.querySelector('input[name="affichage"]:checked').value
@@ -221,7 +239,7 @@ function affichageAcceuil(promo){
             tableau.removeAttribute('hidden')
             grille.setAttribute('hidden','')
 
-            promo.forEach(apprenants => {
+            DATA.forEach(apprenants => {
 
                 let tr = document.createElement("tr")
 
@@ -239,7 +257,7 @@ function affichageAcceuil(promo){
             tableau.setAttribute('hidden','')
 
 
-            promo.forEach(apprenants => {
+            DATA.forEach(apprenants => {
                 let div = document.createElement("div")
                 div.className = 'case'
                 div.innerHTML = `
@@ -251,6 +269,9 @@ function affichageAcceuil(promo){
         }
     }
 }
+
+
+
 
 // affichage de la modal
 function afficherModal(id){
@@ -281,3 +302,39 @@ function afficherModal(id){
         }
     })
 }
+
+
+
+/* ------------- Mode Halloween -------------*/
+let previousTheme = localStorage.getItem("theme") || 'clair'
+document.body.className = previousTheme
+
+const modeH = document.querySelector('.eni')
+
+modeH.addEventListener('click', () => {
+
+  const cls = document.body.classList
+
+  if (!cls.contains('halloween')) {
+    previousTheme = [...cls][0] || 'clair'
+    cls.remove(previousTheme)
+    cls.add('halloween')
+    localStorage.setItem("theme", 'halloween')
+  } else {
+    cls.remove('halloween')
+    cls.add(previousTheme)
+    localStorage.setItem("theme", previousTheme)
+  }
+})
+
+// pointer spider avorté
+// const spider = 'url("../Ressources/spider-32.png") 16 16, auto'
+
+// document.addEventListener('mousedown', () => {
+// document.documentElement.style.cursor = spider
+// })
+
+// document.addEventListener('mouseup', () => {
+// document.documentElement.style.cursor = 'auto'
+// })
+

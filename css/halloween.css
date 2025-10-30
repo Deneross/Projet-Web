@@ -1,0 +1,107 @@
+
+/* caché par défaut */
+.only-halloween {
+  display: none;
+}
+
+/* visible seulement si halloween */
+body.halloween .only-halloween {
+  display: block;
+}
+
+
+
+.reaper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 10%;
+}
+.skeleton{
+  width: 60px;
+  filter: grayscale(100%);
+  transform: rotate(-10deg);
+}
+
+.web{
+	width: 10px;
+	height: 10px;
+	position: relative;
+	z-index: 3;
+  
+}
+.one{
+	width: 50px;
+	height: 50px;
+	bottom: 410px;
+	left: 50px;
+}
+.two{
+	width: 130px;
+	height: 130px;
+	bottom: 350px;
+	left: -120px;
+}
+.three{
+	width: 70px;
+	height: 70px;
+	bottom: 90px;
+	right: -320px;
+}
+.four{
+	width: 100px;
+	height: 100px;
+	bottom: 120px;
+	right: -300px;
+}
+
+#map { 
+  position: relative;
+  z-index: 1;
+}
+
+.spanSpider{
+  position: absolute;   /* clé → sert de référentiel pour l’animation */
+  display: block;       /* pour prendre largeur et hauteur */
+  width: 100%;          /* ou une valeur fixe selon ton besoin */
+  height: 100%;         /* pareil, doit correspondre à la map */
+  height: 75vh; 
+}
+
+
+.spider{
+  --s: 60px;              
+  position: absolute;
+  width: var(--s); height: var(--s);
+  pointer-events: none;
+  z-index: 650;
+  animation: spidermove 20s linear infinite;
+  transform-origin: 50% 50%;
+  filter: brightness(500%) drop-shadow(8px 8px 10px rgba(0,0,0,0.6));
+}
+@keyframes spidermove{
+  /* bord haut → vers la droite */
+   0% { top: 0; left: 0; transform: translate(0, -50%) rotate(90deg); }
+  24% { top: 0; left: calc(100% - var(--s)); transform: translate(-50%, -50%) rotate(90deg); }
+
+  /* angle haut-droit : pivot */
+  25% { top: 0; left: calc(100% - var(--s)); transform: translate(0, -50%) rotate(180deg); }
+
+  /* bord droit → vers le bas */
+  49% { top: calc(100% - var(--s)); left: calc(100% - var(--s)); transform: rotate(180deg); }
+
+  /* angle bas-droit : pivot */
+  50% { top: calc(100% - var(--s)); left: calc(100% - var(--s)); transform: translate(0, 50%)rotate(270deg); }
+
+  /* bord bas → vers la gauche */
+  74% { top: calc(100% - var(--s)); left: 0; transform: translate(0, 50%) rotate(270deg); }
+
+  /* angle bas-gauche : pivot */
+  75% { top: calc(100% - var(--s)); left: 0; transform: rotate(360deg); }
+
+  /* bord gauche → vers le haut */
+  99% { top: 0; left: 0; transform: rotate(360deg); }
+
+  /* angle haut-gauche : fermeture boucle */
+ 100% { top: 0; left: 0; transform: rotate(450deg); }
+}
