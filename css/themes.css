@@ -3,7 +3,7 @@
 
 /* !!! clair par default !!!*/
 body.clair{
-    background: #fff;
+    background-color: white;
     color: #000;
     border: black;
 }
@@ -15,8 +15,13 @@ body.clair .btn {
 }
 
 /*!!! sombre !!! */
+
+body.sombre .autocomplete-items {
+    color: #000;
+}
+
 body.sombre{
-    background: #42424d;
+    background-color: #42424d;
     color: #fff;
     border: white; 
 }

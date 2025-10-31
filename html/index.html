@@ -50,65 +50,66 @@
             </div>
         </div>
     </header>
+    <main>
+        <h2>Liste des apprenants</h2>
+        <section>
+            <div class="tab" id="tab">
+                <table class="tableau" id="tableau">
+                    <thead>
+                        <tr class="head">
+                            <th><h3>Nom</h3></th>
+                            <th><h3>Prénom</h3></th>
+                            <th><h3>Ville</h3></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="grille" id="grille" hidden>
 
-    <h2>Liste des apprenants</h2>
-    <section>
-        <div class="tab" id="tab">
-            <table class="tableau" id="tableau">
-                <thead>
-                    <tr class="head">
-                        <th><h3>Nom</h3></th>
-                        <th><h3>Prénom</h3></th>
-                        <th><h3>Ville</h3></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-        <div class="grille" id="grille" hidden>
+            </div>
+            <div class="detail" id="detail" hidden>
 
-        </div>
-        <div class="detail" id="detail" hidden>
+            </div>
 
-        </div>
-
-        <!-- Modal sans Bootstrap -->
-        <div id="detailModal" class="modal" hidden>
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col">
-                                <img id="detailAvatar" class="avatar" alt="">
+            <!-- Modal sans Bootstrap -->
+            <div id="detailModal" class="modal" hidden>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <img id="detailAvatar" class="avatar" alt="">
+                                </div>
+                                <div class="col">
+                                    <p><strong>Nom :</strong></p>
+                                    <p><strong>Prénom :</strong></p>
+                                    <p><strong>Ville :</strong></p>
+                                </div>
+                                <div class="col2">
+                                    <p id="detailNom"></p>
+                                    <p id="detailPrenom"></p>
+                                    <p id="detailVille"></p>
+                                </div>
                             </div>
-                            <div class="col">
-                                <p><strong>Nom :</strong></p>
-                                <p><strong>Prénom :</strong></p>
-                                <p><strong>Ville :</strong></p>
+                            <div>
+                                <h4>Anecdotes sur l'apprenant :</h4>
+                                <p id="detailAnecdotes"></p>
                             </div>
-                            <div class="col2">
-                                <p id="detailNom"></p>
-                                <p id="detailPrenom"></p>
-                                <p id="detailVille"></p>
-                            </div>
-                        </div>
-                        <div>
-                            <h4>Anecdotes sur l'apprenant :</h4>
-                            <p id="detailAnecdotes"></p>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
+        </section>
+        <div class="only-halloween">
+            <img src="/Ressources/grim-reaper.gif" alt="" class="reaper">
         </div>
-
-
-
-    </section>
-    <div class="only-halloween">
-        <img src="/Ressources/grim-reaper.gif" alt="" class="reaper">
-    </div>
+    </main>
     <script src="../js/script.js"></script>
 </body>
 

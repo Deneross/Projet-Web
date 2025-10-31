@@ -11,6 +11,9 @@
     <!-- pour leaflet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+
 </head>
 <body>
     <header>
@@ -44,19 +47,28 @@
             </nav>
         </div>
     </header>
-    <section>
+    <main>
+        <section>
 
-        <div>
-            <h1 class="texte">Carte</h1>
-        </div>
-        
-        <span class="spanSpider">
-            <img class="spider only-halloween" src="../Ressources/spider.gif"></img>
-            <div class="map" id="map"></div>
-        </span>
-        
-    </section>
-    
+            <div>
+                <h1 class="texte">Carte</h1>
+                
+            </div>
+
+
+            <div class="autocomplete-panel">
+                <div id="autocomplete-container" class="autocomplete-container"></div>
+            </div>
+
+            
+            <span class="spanSpider">
+                <img class="spider only-halloween" src="../Ressources/spider.gif"></img>
+                <div class="map" id="map"></div>
+            </span>
+
+
+        </section>
+    </main>
     <script src="../js/script.js"></script>
 </body>
 </html>
