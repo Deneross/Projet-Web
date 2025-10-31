@@ -68,20 +68,20 @@
 }
 @keyframes spidermove{
   /* bord haut → vers la droite */
-   0% { top: 0; left: 0; transform: translate(0, -50%) rotate(90deg); }
-  24% { top: 0; left: calc(100% - var(--s)); transform: translate(-50%, -50%) rotate(90deg); }
+   0% { top: 0; left: 0; transform: translate(0, 0) rotate(90deg); }
+  24% { top: 0; left: calc(100% - var(--s)); transform: translate(-50%, 0) rotate(90deg); }
 
   /* angle haut-droit : pivot */
-  25% { top: 0; left: calc(100% - var(--s)); transform: translate(0, -50%) rotate(180deg); }
+  25% { top: 0; left: calc(100% - var(--s)); transform: translate(0, -0) rotate(180deg); }
 
   /* bord droit → vers le bas */
   49% { top: calc(100% - var(--s)); left: calc(100% - var(--s)); transform: rotate(180deg); }
 
   /* angle bas-droit : pivot */
-  50% { top: calc(100% - var(--s)); left: calc(100% - var(--s)); transform: translate(0, 50%)rotate(270deg); }
+  50% { top: calc(100% - var(--s)); left: calc(100% - var(--s)); transform: translate(0, 0) rotate(270deg); }
 
   /* bord bas → vers la gauche */
-  74% { top: calc(100% - var(--s)); left: 0; transform: translate(0, 50%) rotate(270deg); }
+  74% { top: calc(100% - var(--s)); left: 0; transform: translate(0, 0) rotate(270deg); }
 
   /* angle bas-gauche : pivot */
   75% { top: calc(100% - var(--s)); left: 0; transform: rotate(360deg); }

@@ -27,11 +27,13 @@
     display: flex;
     justify-content: center;
     gap: 2%;
+    padding: 16px;
 }
 
 /* Table container */
 .tab{
-    height: 360px;    
+    height: 360px; 
+    min-width: 40vw;  
     width: 60vw;        
     overflow-y: auto;       
     border: 2px solid black;
@@ -74,10 +76,11 @@ tbody tr:nth-child(even) {
 /* Info blocks */
 .inf2{
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: space-evenly;
     height: 30vh;
     gap:1.5%;
+
 }
 
 .inf2 h3{
@@ -89,7 +92,6 @@ tbody tr:nth-child(even) {
     display: flex;
     flex-direction: column;
     width: 45vw;
-    padding: 5px;
     height: 95%;
 }
 
@@ -221,6 +223,7 @@ tbody tr:nth-child(even) {
 }
 
 /* acceuil apprenants grille*/
+
 .grille{
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
@@ -231,14 +234,45 @@ tbody tr:nth-child(even) {
     text-align: center;
     border:2px solid black;
     border-radius:8px;
-    padding:10px;
+    padding:10px;;
 }
-.actions { 
-    display:grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: 25%; 
-    margin-top: 3%; 
-    width: 40vw;
-    margin-left: auto;        
-    margin-right: auto;
+.actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  max-width:600px;    
+  margin:3% auto 0 auto;
+}
+
+.actions .lien,
+.actions .btn{
+    flex: 1 auto;
+    text-align:center;
+    padding:12px 0;    
+    max-width: 20vw;      
+    display:flex;
+    justify-content:center;
+    align-items:center;  
+}
+
+/* Smartphone */
+@media (max-width: 768px){
+    .tab{
+    width: 100%;       
+    max-width: 100%;
+    margin: 0;
+    }
+    nav{
+    width: 100%;
+    }
+    .lien{
+        width: 30vw;
+    }
+    .actions .lien,
+    .actions .btn{
+        max-width: 100%;
+    }
+
 }

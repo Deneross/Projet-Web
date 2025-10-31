@@ -313,7 +313,6 @@ function afficherModal(id){
 }
 
 
-
 /* ------------- Mode Halloween -------------*/
 let previousTheme = localStorage.getItem("theme") || 'clair'
 document.body.className = previousTheme
@@ -336,16 +335,6 @@ modeH.addEventListener('click', () => {
   }
 })
 
-// pointer spider avorté
-// const spider = 'url("../Ressources/spider-32.png") 16 16, auto'
-
-// document.addEventListener('mousedown', () => {
-// document.documentElement.style.cursor = spider
-// })
-
-// document.addEventListener('mouseup', () => {
-// document.documentElement.style.cursor = 'auto'
-// })
 
 
 
